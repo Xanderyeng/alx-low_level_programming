@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 int main(void)
-{i
+{
 	char letter;
 
 	for (letter = 'a'; letter <= 'z'; letter++)
