@@ -5,7 +5,7 @@
 /**
  * main - Generates random numbers, gives output of
  *	the last digit whether it is greater than 5,
- * 	less than 6, or 0.
+ *	less than 6, or 0.
  *
  * Return: Always 0.
  */
