@@ -10,14 +10,12 @@ int main(void)
 	char l[] = "_putchar";
 	int i = 1;
 
-	 _putchar(s[0]);
-	
-	do {
+	while (l[i] != '\0')
+	{
 		_putchar(l[i]);
 		i++;
-	} while	(l[i] != '\0')
-
-	_putchar('\n');
+	}
+	_putchar(10);
 
 	return (0);
 }
