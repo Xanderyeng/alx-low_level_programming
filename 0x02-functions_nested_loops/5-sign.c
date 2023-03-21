@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * output_sign - Output the sign of a number
+ * print_sign - Output the sign of a number
  *	@n: zero, negative, positive digit
  *	Return: 1 if > 0, 0 if equal to 0 and
  *	-1 if less than zero
  */
 
-int output_sign(int n)
+int print_sign(int n)
 {
 	if (n > 0)
 	{
