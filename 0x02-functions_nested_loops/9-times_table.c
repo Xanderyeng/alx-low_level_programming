@@ -8,7 +8,7 @@
  *	@z - final ingerger.
 */
 
-void times_table(void)
+void print_final_digit(void)
 {
 	int x = 0; /* factorial */
 	int y; /* count  */
