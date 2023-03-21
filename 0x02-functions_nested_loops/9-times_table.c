@@ -2,7 +2,6 @@
 
 /**
  * print_final_digit - function that prints mutltiplication table for 9
- * print_final_digit - prints multiplication table
  *	@y - intergers/
  *	@x - another interger
  *	@z - final ingerger.
