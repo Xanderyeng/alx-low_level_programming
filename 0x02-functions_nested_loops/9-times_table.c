@@ -7,7 +7,7 @@
  *	@z - final ingerger.
 */
 
-int print_final_digit(int)
+int print_final_digit(void)
 {
 	int x = 0; /* factorial */
 	int y; /* count  */
