@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_final_digit - function that prints mutltiplication table for 9
+ * times_table - function that prints mutltiplication table for 9
  *	@y - intergers/
  *	@x - another interger
  *	@z - final ingerger.
 */
 
-void print_final_digit(void)
+void times_table(void)
 {
 	int x = 0; /* factorial */
 	int y; /* count  */
