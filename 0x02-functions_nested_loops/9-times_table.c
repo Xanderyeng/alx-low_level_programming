@@ -2,7 +2,9 @@
 
 /**
  * times_table - function that prints mutltiplication table for 9
- *
+ *	@y - intergers/
+ *	@x - another interger
+ *	@z - final ingerger.
 */
 
 void times_table(void)
