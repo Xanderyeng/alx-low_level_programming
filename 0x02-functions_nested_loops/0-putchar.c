@@ -8,17 +8,16 @@
 int main(void)
 {
 	char l[] = "_putchar";
-	int i = 0;
+	int i = 1;
+
+	 _putchar(s[0]);
 	
-	do
-	{
+	do {
 		_putchar(l[i]);
 		i++;
-	}
+	} while	(l[i] != '\0')
 
-	(l[i] != '\0')
-	
-	_putchar(10);
+	_putchar('\n');
 
 	return (0);
 }
