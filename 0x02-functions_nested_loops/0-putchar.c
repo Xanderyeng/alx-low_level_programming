@@ -7,14 +7,16 @@
 
 int main(void)
 {
-	char s[] = "_putchar";
+	char l[] = "_putchar";
 	int i = 0;
 
-	while (s[i] != '\0')
 	{
-		_putchar(s[i]);
+		_putchar(l[i]);
 		i++;
 	}
+
+	(l[i] != '\0')
+	
 	_putchar(10);
 
 	return (0);
