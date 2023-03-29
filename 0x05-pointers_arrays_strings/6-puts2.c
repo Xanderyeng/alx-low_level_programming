@@ -6,18 +6,19 @@
  *
  * @str: The string to print every other character of.
  */
+
 void puts2(char *str)
 {
-	int i = 0;
+	int letter;
 
-	if (str != NULL && str[0] != '\0')
+	letter = 0;
+	while (str[letter] != '\0')
 	{
-		while (str[i] != '\0')
+		if (letter % 2 == 0)
 		{
-			_putchar(str[i]);
-			i += 2;
+			_putchar(str[letter]);
 		}
+		letter++;
 	}
-
 	_putchar('\n');
 }
