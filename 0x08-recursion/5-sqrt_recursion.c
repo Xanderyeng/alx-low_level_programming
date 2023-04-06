@@ -14,7 +14,7 @@ int _sqrt_recurs(int n, int y)
 	else if (n == y * y)
 		return (y);
 	else
-		return (_sqrt_aux(n, y + 1));
+		return (_sqrt_recurs(n, y + 1));
 }
 
 /**
@@ -26,5 +26,5 @@ int _sqrt_recurs(int n, int y)
 int _sqrt_recursion(int n)
 {
 
-	return (_sqrt_aux(n, 1));
+	return (_sqrt_recurs(n, 1));
 }
