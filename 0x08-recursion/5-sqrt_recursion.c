@@ -1,8 +1,8 @@
 /**
- * _sqrt_recursion - returns the natural sqrt of a number
- * @n: the number to compute the sqrt of
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number to compute the square root of
  *
- * Return: the sqrt of n, or -1 if n does not have a natural sqrt
+ * Return: the square root of n, or -1 if n does not have a natural square root
  */
 int _sqrt_recursion(int n)
 {
@@ -15,10 +15,10 @@ int _sqrt_recursion(int n)
 
 /**
  * _sqrt_helper - recursive helper function for _sqrt_recursion
- * @n: the number to compute the sqrt of
- * @i: the current guess for the sqrt of n
+ * @n: the number to compute the square root of
+ * @i: the current guess for the square root of n
  *
- * Return: the sqrt of n, or -1 if n does not have a natural sqrt
+ * Return: the square root of n, or -1 if n does not have a natural square root
  */
 int _sqrt_helper(int n, int i)
 {
