@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * main - multiplication of numbers
+ * main - argc and argv
  * @argc: argc
  * @argv: argv
  * Return: 0
@@ -9,21 +9,10 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int mult;
 
-	if (argc > 2)
+	for (i = 0; i < argc; i++)
 	{
-		mult = 1;
-		for (i = 1; i < argc; i++)
-		{
-			mult = mult * atoi(argv[i]);
-		}
-		printf("%d\n", mult);
-		return (0);
+		printf("%s\n", argv[i]);
 	}
-	else
-	{
-		printf("Error\n");
-	}
-	return (1);
+	return (0);
 }
