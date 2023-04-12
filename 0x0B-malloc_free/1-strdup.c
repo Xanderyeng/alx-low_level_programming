@@ -1,24 +1,31 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
- * main - duplicates a string
+ * _strdup - creates a duplicate of a string
+ * @str: the string to duplicate
  *
- * Return: a pointer to the newly allocated memory
- *	containing a copy of the string, or
- *	NULL if memory allocation fails or str is NULL
+ * Return: p or NULL if memory allocation fails or
+ *	str is NULL
  */
-
-int main(void)
+char *_strdup(char *str)
 {
-	char *str = "Hello, world!";
-	char *dup = _strdup(str);
+	char *p;
+	unsigned int i, len;
 
-	if (dup == NULL)
-		return (1);
+	if (str == NULL)
+		return (NULL);
 
-	free(dup);
+	len = strlen(str);
+	p = malloc(sizeof(char) * (len + 1));
+	if (p == NULL)
+		return (NULL);
 
-	return (0);
+	for (i = 0; i < len; i++)
+		p[i] = str[i];
+
+	p[i] = '\0';
+
+	return (p);
 }
-
