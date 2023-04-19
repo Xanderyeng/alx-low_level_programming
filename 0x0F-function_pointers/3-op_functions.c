@@ -2,8 +2,8 @@
 
 /**
  * op_add - add tow numbers
- * @a: first number
- * @b: second number
+ * @a: 1st num
+ * @b: 2nd num
  * Return: a + b
  */
 int op_add(int a, int b)
@@ -12,8 +12,8 @@ int op_add(int a, int b)
 }
 /**
  * op_sub - subs tow numbers
- * @a: first number
- * @b: second number
+ * @a: 1st num
+ * @b: 2nd num
  * Return: a - b
  */
 int op_sub(int a, int b)
@@ -22,8 +22,8 @@ int op_sub(int a, int b)
 }
 /**
  * op_mul - mult tow numbers
- * @a: first number
- * @b: second number
+ * @a: 1st num
+ * @b: 2nd num
  * Return: a * b
  */
 int op_mul(int a, int b)
