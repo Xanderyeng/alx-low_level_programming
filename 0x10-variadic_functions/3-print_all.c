@@ -1,86 +1,50 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
- * print_char - print a char
- * @list: argument list
- */
-void print_char(va_list list)
-{
-	printf("%c", va_arg(list, int));
-}
-
-/**
- * print_integer - print an integer
- * @list: argument list
- */
-void print_integer(va_list list)
-{
-	printf("%d", va_arg(list, int));
-}
-
-/**
- * print_float - print a float
- * @list: argument list
- */
-void print_float(va_list list)
-{
-	printf("%f", va_arg(list, double));
-}
-
-/**
- * print_string - print a string
- * @list: argument list
- */
-void print_string(va_list list)
-{
-	char *str = va_arg(list, char *);
-
-	if (str == NULL)
-	{
-		printf("(nil)");
-		return;
-	}
-	printf("%s", str);
-}
-
-/**
- * print_all - print anything
- * @format: format string
+ * print_all - prints anything.
+ * @format: list of types of arguments passed to the function
+ *
+ * Return: void
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	unsigned int i = 0, j;
-	char *separator = "";
+	va_list args;
+	int i = 0;
+	char *str;
 
-	va_start(list, format);
-
-	printer_t printers[] = {
-		{"c", print_char},
-		{"i", print_integer},
-		{"f", print_float},
-		{"s", print_string},
-		{NULL, NULL}
-	};
+	va_start(args, format);
 
 	while (format && format[i])
 	{
-		j = 0;
-		while (printers[j].symbol)
+		switch (format[i])
 		{
-			if (format[i] == *(printers[j].symbol))
-			{
-				printf("%s", separator);
-				printers[j].print(list);
-				separator = ", ";
-			}
-			j++;
+			case 'c':
+				printf("%c", va_arg(args, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(args, int));
+				break;
+			case 'f':
+				printf("%f", va_arg(args, double));
+				break;
+			case 's':
+		str = va_arg(args, char *);
+		if (str == NULL)
+		{
+			printf("(nil)");
+			break;
 		}
+		printf("%s", str);
+		break;
+	default:
+		i++;
+		continue;
+	}
+	if (format[i + 1] != '\0')
+		printf(", ");
 		i++;
 	}
-
 	printf("\n");
-	va_end(list);
+
+	va_end(args);
 }
