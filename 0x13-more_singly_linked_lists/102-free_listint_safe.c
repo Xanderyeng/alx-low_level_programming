@@ -1,37 +1,40 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * free_listint_safe - Frees a listint_t list safely
+ * print_listint_safe - prints a listint_t linked list
+ * @head: pointer to the head of the list
  *
- * @h: A pointer to a pointer to the head node of the list
- *
- * Return: The size of the list that was free'd
+ * Return: the number of nodes in the list
  */
-size_t free_listint_safe(listint_t **h)
+size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
-	listint_t *tmp;
+	const listint_t *slow, *fast;
 
-	while (*h != NULL)
+	if (head == NULL)
+	exit(98);
+
+	slow = head;
+	fast = head;
+
+	while (slow && fast && fast->next)
 	{
-		if (*h <= (*h)->next)
-		{
-			tmp = *h;
-			*h = NULL;
-			while (tmp != NULL)
-			{
-				tmp = tmp->next;
-				free(*h);
-				*h = tmp;
-				count++;
-			}
-			return (count);
-		}
+		slow = slow->next;
+		fast = fast->next->next;
 
-	tmp = (*h)->next;
-	free(*h);
-	*h = tmp;
-	count++;
+		if (slow == fast)
+		{
+			printf("-> [%p] %d\n", (void *)fast, fast->n);
+			exit(98);
+		}
+	}
+
+	while (head != NULL)
+	{
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		count++;
 	}
 
 	return (count);
