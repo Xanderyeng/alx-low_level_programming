@@ -6,22 +6,23 @@
  *
  * Return: void
  */
+
 void print_binary(unsigned long int n)
 {
 	unsigned long int mask = 1;
-	unsigned int bits = sizeof(n) * 8;
-	int flag = 0;
+	int bit;
 
-	while (bits--)
+	/* Move the mask to the left until the leftmost bit is 1 */
+	while ((mask << 1) > 0)
 	{
-		if ((n >> bits) & 1)
-		{
-			_putchar('1');
-			flag = 1;
-		}
-		else if (flag)
-			_putchar('0');
+		mask <<= 1;
 	}
-	if (!flag)
-		_putchar('0');
+
+	/* Print the binary representation of the number */
+	while (mask > 0)
+	{
+		bit = (n & mask) ? 1 : 0;
+		_putchar(bit + '0');
+		mask >>= 1;
+	}
 }
