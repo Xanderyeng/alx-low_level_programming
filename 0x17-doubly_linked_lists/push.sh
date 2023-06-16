@@ -1,6 +1,6 @@
 #!/bin/bash
 
-chmod +x *.py
+#chmod +x *.py
 
 git add .
 git commit -m "$1"
